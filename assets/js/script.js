@@ -175,6 +175,16 @@ console.log(scuola)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const prodotti = ['Penna', 'Quaderno', 'Zaino']
+const cercato = "Zaino"
+if (prodotti.indexOf(cercato) === -1) {
+   console.log("non è in carrello")
+} else {
+   console.log(prodotti.indexOf(cercato))
+}
+
+console.log(`${cercato} è in carrello: ${prodotti.includes(cercato)}`)
+
 /* ESERCIZIO 11 — Lista utenti
    Array utenti di 3 oggetti { nome, eta }.
    Con un for, stampa ogni utente: 'Mario (25 anni)'.
@@ -182,6 +192,17 @@ console.log(scuola)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const utenti = [
+   { nome: "paolo", eta: 22 },
+   { nome: "pier", eta: 17 },
+   { nome: "Marco", eta: 60 }
+]
+
+for (let wey = 0; wey < utenti.length; wey++) {
+   console.log(`${utenti[wey].nome} ${utenti[wey].eta} anni`)
+}
+console.table(utenti)
 
 /* ESERCIZIO 12 — Inventario disponibili
    Array prodotti di 4 oggetti { nome, prezzo, disponibile }.
@@ -192,6 +213,30 @@ console.log(scuola)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const product = [
+   { nome: "pera", prezzo: 2, disponibile: true },
+   { nome: "mela", prezzo: 5, disponibile: false },
+   { nome: "banana", prezzo: 8, disponibile: true },
+   { nome: "melone", prezzo: 13, disponibile: true },
+
+]
+
+console.table(product)
+
+for (let opalo = 0; opalo < product.length; opalo++) {
+   if (product[opalo].disponibile && product[opalo].prezzo < 10) {
+      console.log(`OFFERTA: ${product[opalo].nome} ${product[opalo].prezzo}£`)
+
+   } else if (product[opalo].disponibile && product[opalo].prezzo >= 10) {
+      console.log(`${product[opalo].nome} - ${product[opalo].prezzo}£`)
+
+   } else {
+      console.log(`${product[opalo].nome} - esaurito`)
+   }
+}
+
+
 
 /* --EXTRA-- ESERCIZIO 13 — Reverse manuale
    Array [1, 2, 3, 4, 5].
