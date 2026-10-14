@@ -108,9 +108,9 @@ console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione}�
 /* il ternario richiesto */
 
 const spedizione2 = totale >= 50 ? 0 : 9.90;
-const totaleFinale2= totale + spedizione2
+const totaleFinale2 = totale + spedizione2
 
-console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}£ ha come totale finale ${totaleFinale2}£`)
+console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}£ ha come totale finale ${totaleFinale2}£`);
 
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, 'ciao', true]).
@@ -119,7 +119,15 @@ console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const valori = [42, 'ciao', true]
 
+for (let posizione = 0; posizione < valori.length; posizione++) {
+   if (typeof valori[posizione] === "number") {
+      console.log(`${valori[posizione]} è un numero`);
+   } else {
+      console.log(`${valori[posizione]} non è un numero`);
+   }
+}
 
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
@@ -128,6 +136,19 @@ console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
+const numeri = []
+
+numeri.push(1)
+numeri.push(2)
+numeri.push(3)
+numeri.push(4)
+numeri.push(5)
+numeri.unshift(0)
+
+console.log(numeri)
+console.log(numeri.length)
+
 /* ESERCIZIO 9 — Carrello con splice
    Array ['Penna', 'Quaderno', 'Zaino', 'Astuccio'].
    Con splice: rimuovi 'Quaderno', poi inserisci 'Diario' al suo posto.
@@ -135,6 +156,15 @@ console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const scuola = ['Penna', 'Quaderno', 'Zaino', 'Astuccio']
+
+scuola.splice(1, 1)
+console.log(scuola)
+
+scuola.splice(1, 0, "Diario")
+console.log(scuola)
+
 
 /* ESERCIZIO 10 — Cerca un articolo
    Array prodotti = ['Penna', 'Quaderno', 'Zaino'].
@@ -169,5 +199,5 @@ console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}
    Stampa 'inverso'.
    Vincolo: niente metodo .reverse() di JavaScript.
 */
-ciaso
+
 /* SCRIVI QUI LA TUA RISPOSTA */
