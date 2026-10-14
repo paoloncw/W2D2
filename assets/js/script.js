@@ -169,6 +169,5 @@ console.log(`il totale carrello è ${totale}£ - la spedizione di ${spedizione2}
    Stampa 'inverso'.
    Vincolo: niente metodo .reverse() di JavaScript.
 */
-
+ciaso
 /* SCRIVI QUI LA TUA RISPOSTA */
-cancelAnimationFrame
